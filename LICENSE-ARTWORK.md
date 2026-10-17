@@ -1,25 +1,29 @@
 # 美术素材许可 · Artwork License
 
-本仓库中的**美术素材**采用 **Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-International（CC BY-NC-SA 4.0）** 许可。
+本仓库中的**全部美术素材**采用 **Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International（CC BY-NC-SA 4.0）** 许可，其中包括：
 
-The artwork in this repository is licensed under **CC BY-NC-SA 4.0**.
+- **本项目生成**的背景底图、纹章、花边、流光带、晶簇花等装饰，以及叠加合成的背景成品
+- **ZipZipPipe** 创作的白龙娘角色立绘（[主页](https://www.pixiv.net/users/18604994)）
+  —— 版权归原作者，本项目**沿用同一协议**发布，共享要求天然满足
+
+All artwork in this repository is licensed under **CC BY-NC-SA 4.0**,
+including the ZipZipPipe character illustrations (© ZipZipPipe) which are
+redistributed here under the same license.
 
 完整的法律文本请见官方地址：
 <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>
 
 ---
 
-## 为什么不是「最宽松」的许可？
+## 为什么是 CC BY-NC-SA 4.0 而不是更宽松的许可？
 
-本项目刻意对齐参考项目 `@smalltailqwq/dsh-client-ui-skin-maid-atelier` 的做法：
-**代码 MIT + 美术 CC BY-NC-SA 4.0 + 完整署名链**。理由有三个：
-
-1. **含角色的成品无法放宽。** `background*.png` 与 `engine-patch.css` 里都内嵌了
-   第三方角色形象；对这些文件发「可商用」等于拿别人的作品给第三方授权，既无权也无效。
-2. **可能受上游 ShareAlike 约束。** 若角色素材本身是「相同方式共享」类协议，
-   含角色的合成图作为衍生作品**必须**延续同协议。
-3. **「最宽松」与「非商用」互相矛盾。** CC0 的定义就是允许商用，两者不可能同时成立。
+1. **上游就是 NC-SA。** 角色立绘由 **ZipZipPipe** 创作，协议为 **CC BY-NC-SA 4.0**。
+   本项目把立绘合成进背景、转码为内嵌 data URI，属于**衍生作品**，
+   按 ShareAlike 要求**必须**以相同协议提供 —— 这一点没有商量余地。
+2. **「最宽松」与「非商用」互相矛盾。** CC0 的定义就是允许商用，两者不可能同时成立。
+3. **与生态一致。** 参考项目 `@smalltailqwq/dsh-client-ui-skin-maid-atelier`
+   同样是「代码 MIT + 美术 CC BY-NC-SA 4.0 + 完整署名链」。保持一致，使用者也少踩坑。
 
 如果你确实需要可商用的素材，可行的做法是使用**不含角色立绘**的版本
 （`tools/compose_codex_theme.py` 支持 `NO_FIGURE=1`，补丁也可去掉
@@ -29,26 +33,21 @@ The artwork in this repository is licensed under **CC BY-NC-SA 4.0**.
 
 ## 适用范围 / Scope
 
-以下内容适用本许可（**本项目自行生成**的部分）：
-
-| 路径 | 内容 |
-|---|---|
-| `background.png` | 明版主题背景的**背景底图部分**（宫殿、水晶、光带、花边）※ 见下方排除说明 |
-| `background-night.png` | 夜版主题背景的**背景底图部分** ※ 见下方排除说明 |
-| `assets-gen/image2/` | gpt-image-2 生成的宫殿、流光带、花边、纹章、晶簇花等装饰元素 |
-| `docs/screenshots/` | 预览截图（其中出现的角色形象仍属原作者） |
+| 路径 | 内容 | 版权 |
+|---|---|---|
+| `background.png` / `background-night.png` | 主题背景成品（本项目合成，**含角色立绘**） | 制作 © eleysia111，角色 © ZipZipPipe |
+| `assets-gen/image2/` | gpt-image-2 生成的宫殿、流光带、花边、纹章、晶簇花 | © eleysia111 |
+| `assets-in/` | 角色原图：主立绘、副立绘、Q 版 | **© ZipZipPipe** |
+| `engine-patch.css` | 内嵌的角色 data URI（`--sky-figure` / `--sky-chibi`）与本项目规则 | 角色 © ZipZipPipe，其余 © eleysia111 |
+| `docs/screenshots/` | 预览截图 | 角色 © ZipZipPipe，截图 © eleysia111 |
 
 **不适用**本许可的内容：
 
 - 源码（`*.py` / `*.mjs` / `*.ps1` 等）→ 见 [LICENSE](LICENSE)（MIT）
-- **角色立绘与 Q 版白龙形象**（`assets-in/` 中的主立绘、副立绘、Q 版；
-  以及 `background*.png` 中被合成的角色、`engine-patch.css` 里 `--sky-figure` /
-  `--sky-chibi` 两个 data URI）→ **第三方社区素材，版权归原作者，本项目不持有权利、
-  也未对其再许可**。详见 [NOTICE.md](NOTICE.md)。
 - 任何**不属于本仓库**的其他第三方内容 → 见 [NOTICE.md](NOTICE.md)
 
-> ⚠ 因此，如果你要商用或再分发 `background*.png`，请注意其中**包含第三方角色形象**，
-> 你需要**另行取得角色素材权利人的许可**，仅遵守 CC BY-NC-SA 并不足够。
+> 商用前请注意：本仓库**全部美术**都带 **NC（非商业）** 限制，
+> 且角色形象的版权属于 ZipZipPipe。**商业使用请另行取得原作者许可。**
 
 ---
 
@@ -76,19 +75,24 @@ The artwork in this repository is licensed under **CC BY-NC-SA 4.0**.
 ## 署名示例 / Attribution example
 
 ```
-基于「天空工坊 · Sky Atelier」（作者：Sky Atelier contributors）的素材创作，
-原始许可：CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/
-已做修改：调整了背景的色调与构图。
+本作品基于以下素材创作：
+- 「天空工坊 · Sky Atelier」（作者：eleysia111）— 背景底图与装饰，
+  CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/
+- 白龙娘角色形象（作者：ZipZipPipe — https://www.pixiv.net/users/18604994），
+  CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/
+已做修改：调整了背景色调与构图，并对角色立绘做了裁切与合成。
 ```
+
+> CC BY-NC-SA 要求「注明是否修改」。上例最后一行就是干这个的，转载时别漏。
 
 ---
 
 ## 说明 / Notes
 
-- 本项目中**属于我们生成的**素材（背景底图、纹章、花边、流光带、晶簇花等）均为自行生成
+- 本项目生成的素材（背景底图、纹章、花边、流光带、晶簇花等）均为自行生成
   （`gpt-image-2` + 自写合成脚本），未复制任何第三方皮肤的图片。
   风格上参考过若干公开皮肤的配色与构图思路，但**没有复制其素材**。
-- **但角色形象不是我们生成的**：主立绘、副立绘与 Q 版白龙均来自社区既有素材。
-  它们的版权与许可不属于本文件，也不在本项目可授权的范围内。
-- 本许可仅覆盖由本项目产出的素材。若你在自己的衍生作品里使用了第三方素材，
-  那部分仍受其原始许可约束。
+- **角色形象由 ZipZipPipe 创作**，协议同为 CC BY-NC-SA 4.0，
+  本仓库在**同一协议**下分发，属于合规的衍生共享；角色形象的**版权仍归 ZipZipPipe**。
+- 本许可覆盖本仓库全部美术素材。若你在自己的衍生作品里再次使用，
+  请**同时保留两位作者（ZipZipPipe 与本项目）的署名**。

@@ -5,11 +5,12 @@
 
 ![首页预览](docs/screenshots/home-light.png)
 
-> ⚠ **素材来源说明（重要）**
-> 图中**角色立绘与 Q 版白龙形象来自社区既有素材，版权归原作者**，并非本项目生成；
-> 本项目自行生成的只有**背景底图、纹章、花边、流光带、晶簇花等装饰元素**。
+> **素材来源与许可**
+> 图中**角色立绘与 Q 版白龙形象由 ZipZipPipe 创作**（<https://www.pixiv.net/users/18604994>），
+> 采用 **CC BY-NC-SA 4.0** 协议，**禁止商用**。
+> 本项目自行生成的只有**背景底图、纹章、花边、流光带、晶簇花等装饰元素**，
+> 同样以 CC BY-NC-SA 4.0 发布 —— 协议一致，衍生共享要求天然满足。
 > 详见 [NOTICE.md](NOTICE.md) 与 [LICENSE-ARTWORK.md](LICENSE-ARTWORK.md)。
-> 若你是角色素材的权利人并希望停止分发，请联系我们，会立即移除。
 
 ---
 
@@ -184,12 +185,12 @@ powershell -ExecutionPolicy Bypass -File .\patch-engine-css.ps1 -Action apply
 |---|---|
 | **代码**（`.py` / `.mjs` / `.ps1`） | [MIT](LICENSE) |
 | **本项目生成的美术**（背景底图、纹章、花边、流光带、晶簇花、截图排版） | [CC BY-NC-SA 4.0](LICENSE-ARTWORK.md) —— **禁止商用**，署名，衍生需同协议 |
-| **角色立绘与 Q 版形象**（主立绘 / 副立绘 / Q 版白龙） | ⚠ **第三方社区素材，版权归原作者，本项目不持有权利、也未对其再许可**。见 [NOTICE.md](NOTICE.md) |
+| **角色立绘与 Q 版形象**（主立绘 / 副立绘 / Q 版白龙） | [CC BY-NC-SA 4.0](LICENSE-ARTWORK.md) —— 版权归 **ZipZipPipe**，本项目在其基础上做了裁切与合成 |
 | **Codex Dream Skin 引擎本体** | 不随本仓库分发，需自行安装 |
 
 ## 致谢
 
 - [Codex Dream Skin](https://dreamskin.cc) —— 皮肤引擎与注入机制
-- **角色立绘 / Q 版白龙形象** —— 来自社区素材，版权归原作者（出处待补充，见 [NOTICE.md](NOTICE.md)）
+- **角色立绘 / Q 版白龙形象** —— [ZipZipPipe](https://www.pixiv.net/users/18604994) 创作，CC BY-NC-SA 4.0
 - 风格参考 `@smalltailqwq/dsh-client-ui-skin-maid-atelier`（CC BY-NC-SA 4.0）：**仅参考配色思路与构图**，未使用其素材
 - 背景底图与装饰元素生成：`gpt-image-2` + 本项目合成脚本
