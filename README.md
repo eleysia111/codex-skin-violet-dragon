@@ -28,6 +28,19 @@
 
 ---
 
+## 获取
+
+```bash
+git clone https://github.com/eleysia111/codex-skin-violet-dragon.git
+cd codex-skin-violet-dragon
+```
+
+只想直接用皮肤的话，去 [Releases](https://github.com/eleysia111/codex-skin-violet-dragon/releases)
+下载 `sky-atelier-codex-skin-v1.0.zip`——里面是「拿来就能用」的皮肤文件与校验脚本，
+不含素材库与生成脚本（那部分要用仓库源码）。
+
+---
+
 ## 环境要求
 
 - **Windows 10 / 11**
