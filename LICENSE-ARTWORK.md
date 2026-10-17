@@ -10,6 +10,23 @@ The artwork in this repository is licensed under **CC BY-NC-SA 4.0**.
 
 ---
 
+## 为什么不是「最宽松」的许可？
+
+本项目刻意对齐参考项目 `@smalltailqwq/dsh-client-ui-skin-maid-atelier` 的做法：
+**代码 MIT + 美术 CC BY-NC-SA 4.0 + 完整署名链**。理由有三个：
+
+1. **含角色的成品无法放宽。** `background*.png` 与 `engine-patch.css` 里都内嵌了
+   第三方角色形象；对这些文件发「可商用」等于拿别人的作品给第三方授权，既无权也无效。
+2. **可能受上游 ShareAlike 约束。** 若角色素材本身是「相同方式共享」类协议，
+   含角色的合成图作为衍生作品**必须**延续同协议。
+3. **「最宽松」与「非商用」互相矛盾。** CC0 的定义就是允许商用，两者不可能同时成立。
+
+如果你确实需要可商用的素材，可行的做法是使用**不含角色立绘**的版本
+（`tools/compose_codex_theme.py` 支持 `NO_FIGURE=1`，补丁也可去掉
+`--sky-figure` / `--sky-chibi`）——那部分完全由本项目生成，可单独以更宽松的协议授权。
+
+---
+
 ## 适用范围 / Scope
 
 以下内容适用本许可（**本项目自行生成**的部分）：
