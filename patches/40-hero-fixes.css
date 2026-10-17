@@ -1,0 +1,88 @@
+/* ============================================================================
+ * 40-hero-fixes.css —— 首页 hero 文案 / 排版修整
+ *   （HANDOFF 第四节 1/2/3 + 后续追加的字号放大、恢复 logo）
+ *
+ * ★ 核心认知（别再走弯路）：
+ *   副标题 / tagline / 项目前缀这三处文案 **完全不在 DOM 里**，
+ *   用 querySelectorAll 搜「天空工坊」「循此苦旅」永远搜不到，也不必去穿 Shadow DOM。
+ *   它们是引擎 dream-skin.css 里三个伪元素的 `content: var(--dream-skin-*)`：
+ *     [data-feature="game-source"]::before       ← --dream-skin-name（= theme.json 的 name）
+ *     [data-feature="game-source"]::after        ← --dream-skin-tagline
+ *     [data-feature="game-source"] button::before ← --dream-skin-project-prefix
+ *   → 所以 `brandSubtitle` 删了没用（::before 读的是 --dream-skin-name，不是 brandSubtitle），
+ *     `projectPrefix: ""` 也没用（renderer-inject.js 里 `THEME.projectPrefix || "选择项目 · "`
+ *     会把空串吃掉回退默认值）。只能在这里用 CSS 压掉。
+ *
+ *   这些容器都要求 [role="main"]:has([data-testid="home-icon"])，只在首页生效。
+ *
+ * ★ 为什么每条都要 !important：
+ *   引擎样式表是以 adoptedStyleSheets 注入的，按 CSSOM 规范排在 document 样式**之后**，
+ *   同等重要性下引擎赢。要压过它必须 !important 且选择器与之同级或更强。
+ * ========================================================================== */
+
+/* ── 1) 删掉副标题「天空工坊 · 白色龙娘」────────────────────────────────── */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"]::before {
+  content: none !important;
+  display: none !important;
+  margin: 0 !important;
+}
+
+/* ── 2) tagline「循此苦旅，直抵群星。」改成紫色 ──────────────────────────── */
+/* 引擎原样式是 color: currentColor + opacity: .76，所以看上去是深灰而不是灰紫 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"]::after {
+  color: #8B5CF6 !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  text-shadow: 0 0 14px rgba(139, 92, 246, .22);
+}
+
+/* ── 3a) 项目 chip 去掉「选择项目 · 」前缀 ───────────────────────────────── */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"] button::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* ── 3b) 项目 chip 去胶囊框 + 去点状下划线，只留加粗紫项目名 ─────────────── */
+/* 引擎给的是 1px 紫边 + 999px 圆角 + 10% 紫底 + underline dotted/offset 5px，
+   叠在「你想让我们在 ___ 中构建什么？」句中像个突兀的胶囊；
+   这里全拆掉，改用颜色 + 字重 + 辉光做强调，句子读起来连贯 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"] button {
+  padding: 0 !important;
+  margin: 0 4px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  color: #5B3FB0 !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 16px rgba(139, 92, 246, .28);
+}
+
+/* ── 3c) 但保留「这里能点」的暗示：只在 hover 时浮现点状下划线 ──────────── */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"] button:hover {
+  color: #8B5CF6 !important;
+  text-decoration: underline dotted 1px !important;
+  text-underline-offset: 4px !important;
+}
+
+/* ── 4) 恢复官方首页 logo 图标 ──────────────────────────────────────────── */
+/* 引擎有一句 [data-testid="home-icon"] { display: none !important; } 把它整个藏掉，
+   并用 ::before 的副标题顶替。副标题删了之后这里补回来。
+   原生是 56px（size-14）+ opacity .3 的淡灰；在花纹背景上太糊，
+   所以染成主题紫并提到 .55，看得清又不抢标题。 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-testid="home-icon"] {
+  display: block !important;
+  color: #8B5CF6 !important;
+  opacity: .55 !important;
+}
+
+/* ── 5) 主标题字号放大 + 居中 ───────────────────────────────────────────── */
+/* 引擎：clamp(19px, 1.85vw, 27px) → 1126px 窗口实测只有 20.8px，比原生 heading-xl（约 26px）小一圈。
+   另外引擎把它 text-align: inherit，导致 ::after 的 tagline 在块内左对齐、看着歪，
+   这里统一 center 让 logo / 标题 / tagline 三者同轴。 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"] {
+  font-size: clamp(24px, 2.4vw, 32px) !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+}

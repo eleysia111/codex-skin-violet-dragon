@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "white-dragon-sky-tech",
+  "name": "天空工坊 · 白色龙娘",
+  "tagline": "循此苦旅，直抵群星。",
+  "projectPrefix": "",
+  "projectLabel": "◉  选择项目",
+  "statusText": "SKY ATELIER",
+  "quote": "循此苦旅，直抵群星。",
+  "image": "background.png",
+  "appearance": "light",
+  "art": {
+    "focusX": 0.78,
+    "focusY": 0.42,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "colors": {
+    "background": "#F7F4FF",
+    "panel": "#FFFFFF",
+    "panelAlt": "#F1ECFF",
+    "accent": "#8B5CF6",
+    "accentAlt": "#5B3FB0",
+    "secondary": "#B9A6F2",
+    "highlight": "#8B5CF6",
+    "text": "#2A2340",
+    "muted": "#6E6490",
+    "line": "rgba(139, 92, 246, .22)"
+  },
+  "promoTitle": "天空工坊",
+  "promoSub": "Codex Dream Skin 主题"
+}

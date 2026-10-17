@@ -1,0 +1,57 @@
+/* ===== 候选 CSS（CDP 实时预览用，不是最终产物）===== */
+
+/* 1) 删副标题「天空工坊 · 白色龙娘」 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"]::before {
+  content: none !important;
+  display: none !important;
+  margin: 0 !important;
+}
+
+/* 2) tagline「循此苦旅，直抵群星。」→ 紫色 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"]::after {
+  color: #8B5CF6 !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  text-shadow: 0 0 14px rgba(139, 92, 246, .22);
+}
+
+/* 3a) 项目 chip 去前缀 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"] button::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* 3b) 项目 chip 去胶囊框 / 去点状下划线 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"] button {
+  padding: 0 !important;
+  margin: 0 4px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  color: #5B3FB0 !important;
+  font-weight: 800 !important;
+  text-shadow: 0 0 16px rgba(139, 92, 246, .28);
+}
+
+/* 3c) hover 才浮现点状下划线 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"] button:hover {
+  color: #8B5CF6 !important;
+  text-decoration: underline dotted 1px !important;
+  text-underline-offset: 4px !important;
+}
+
+/* 4) 恢复官方首页 logo（引擎默认 display:none 藏掉了），并染成主题紫 */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-testid="home-icon"] {
+  display: block !important;
+  color: #8B5CF6 !important;
+  opacity: .55 !important;
+}
+
+/* 5) 主标题字号放大：引擎 clamp(19px,1.85vw,27px) 太保守，实测只有 ~21px（原生约 26px） */
+html[data-dream-skin="active"] [role="main"]:has([data-testid="home-icon"]) [data-feature="game-source"] {
+  font-size: clamp(24px, 2.4vw, 32px) !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+}

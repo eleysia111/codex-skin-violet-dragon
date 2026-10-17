@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "sky-atelier-night",
+  "name": "天空工坊 · 夜",
+  "brandSubtitle": "SKY ATELIER · NIGHT",
+  "tagline": "夜色里的紫水晶穹顶，白龙仍在替你守着。",
+  "projectPrefix": "选择项目 · ",
+  "projectLabel": "◉  选择项目",
+  "statusText": "SKY ATELIER NIGHT",
+  "quote": "把月亮也借来照一照",
+  "image": "background.png",
+  "appearance": "dark",
+  "art": {
+    "focusX": 0.78,
+    "focusY": 0.42,
+    "safeArea": "left",
+    "taskMode": "ambient"
+  },
+  "colors": {
+    "background": "#1A1230",
+    "panel": "#241A44",
+    "panelAlt": "#2E2154",
+    "accent": "#B9A6F2",
+    "accentAlt": "#C9B6FF",
+    "secondary": "#8B5CF6",
+    "highlight": "#D9CFF7",
+    "text": "#F3EEFF",
+    "muted": "#A99BCB",
+    "line": "rgba(201, 182, 255, .26)"
+  },
+  "promoTitle": "天空工坊 · 夜",
+  "promoSub": "Codex Dream Skin 主题"
+}
