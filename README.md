@@ -5,12 +5,7 @@
 
 ![首页预览](docs/screenshots/home-light.png)
 
-> **素材来源与许可**
-> 图中**角色立绘与 Q 版白龙形象由 ZipZipPipe 创作**（<https://www.pixiv.net/users/18604994>），
-> 采用 **CC BY-NC-SA 4.0** 协议，**禁止商用**。
-> 本项目自行生成的只有**背景底图、纹章、花边、流光带、晶簇花等装饰元素**，
-> 同样以 CC BY-NC-SA 4.0 发布 —— 协议一致，衍生共享要求天然满足。
-> 详见 [NOTICE.md](NOTICE.md) 与 [LICENSE-ARTWORK.md](LICENSE-ARTWORK.md)。
+<sub>角色形象 © <a href="https://www.pixiv.net/users/18604994">ZipZipPipe</a>（CC BY-NC-SA 4.0）· 背景与装饰由本项目生成 · 完整许可见 <a href="#许可">文末「许可」</a></sub>
 
 ---
 
@@ -187,6 +182,13 @@ powershell -ExecutionPolicy Bypass -File .\patch-engine-css.ps1 -Action apply
 | **本项目生成的美术**（背景底图、纹章、花边、流光带、晶簇花、截图排版） | [CC BY-NC-SA 4.0](LICENSE-ARTWORK.md) —— **禁止商用**，署名，衍生需同协议 |
 | **角色立绘与 Q 版形象**（主立绘 / 副立绘 / Q 版白龙） | [CC BY-NC-SA 4.0](LICENSE-ARTWORK.md) —— 版权归 **ZipZipPipe**，本项目在其基础上做了裁切与合成 |
 | **Codex Dream Skin 引擎本体** | 不随本仓库分发，需自行安装 |
+
+**素材来源**：角色立绘与 Q 版白龙形象由 [ZipZipPipe](https://www.pixiv.net/users/18604994) 创作、
+以 CC BY-NC-SA 4.0 发布；本项目自行生成的只有**背景底图、纹章、花边、流光带、晶簇花等装饰元素**，
+同样采用 CC BY-NC-SA 4.0。**两边协议一致**，因此作为衍生作品的「相同方式共享」要求天然满足。
+角色形象的版权仍归 ZipZipPipe。
+
+完整的署名链与「已做修改」说明见 [NOTICE.md](NOTICE.md)，许可细节见 [LICENSE-ARTWORK.md](LICENSE-ARTWORK.md)。
 
 ## 致谢
 
