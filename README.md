@@ -5,7 +5,11 @@
 
 ![首页预览](docs/screenshots/home-light.png)
 
-> 截图中的项目名仅作展示。本仓库**不包含**任何第三方皮肤的素材，美术均为本项目自行生成。
+> ⚠ **素材来源说明（重要）**
+> 图中**角色立绘与 Q 版白龙形象来自社区既有素材，版权归原作者**，并非本项目生成；
+> 本项目自行生成的只有**背景底图、纹章、花边、流光带、晶簇花等装饰元素**。
+> 详见 [NOTICE.md](NOTICE.md) 与 [LICENSE-ARTWORK.md](LICENSE-ARTWORK.md)。
+> 若你是角色素材的权利人并希望停止分发，请联系我们，会立即移除。
 
 ---
 
@@ -176,12 +180,16 @@ powershell -ExecutionPolicy Bypass -File .\patch-engine-css.ps1 -Action apply
 
 ## 许可
 
-- **代码**（`.py` / `.mjs` / `.ps1`）：[MIT](LICENSE)
-- **美术素材**（背景、立绘、生成件、截图）：[CC BY-NC-SA 4.0](LICENSE-ARTWORK.md) —— **禁止商用**，署名，衍生需同协议
-- **不包含** Codex Dream Skin 引擎本体与任何第三方皮肤素材，详见 [NOTICE.md](NOTICE.md)
+| 内容 | 许可 |
+|---|---|
+| **代码**（`.py` / `.mjs` / `.ps1`） | [MIT](LICENSE) |
+| **本项目生成的美术**（背景底图、纹章、花边、流光带、晶簇花、截图排版） | [CC BY-NC-SA 4.0](LICENSE-ARTWORK.md) —— **禁止商用**，署名，衍生需同协议 |
+| **角色立绘与 Q 版形象**（主立绘 / 副立绘 / Q 版白龙） | ⚠ **第三方社区素材，版权归原作者，本项目不持有权利、也未对其再许可**。见 [NOTICE.md](NOTICE.md) |
+| **Codex Dream Skin 引擎本体** | 不随本仓库分发，需自行安装 |
 
 ## 致谢
 
 - [Codex Dream Skin](https://dreamskin.cc) —— 皮肤引擎与注入机制
-- 风格参考 `@smalltailqwq/dsh-client-ui-skin-maid-atelier`（CC BY-NC-SA 4.0）：**仅参考配色思路与构图**，未使用其任何图片素材
-- 素材生成：`gpt-image-2`
+- **角色立绘 / Q 版白龙形象** —— 来自社区素材，版权归原作者（出处待补充，见 [NOTICE.md](NOTICE.md)）
+- 风格参考 `@smalltailqwq/dsh-client-ui-skin-maid-atelier`（CC BY-NC-SA 4.0）：**仅参考配色思路与构图**，未使用其素材
+- 背景底图与装饰元素生成：`gpt-image-2` + 本项目合成脚本
